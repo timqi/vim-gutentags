@@ -301,10 +301,10 @@ function! gutentags#setup_gutentags() abort
     " callback. This will let us get that buffer's variables without causing
     " errors.
     let l:bn = bufnr('%')
-    execute 'augroup gutentags_buffer_' . l:bn
-    execute '  autocmd!'
-    execute '  autocmd BufWritePost <buffer=' . l:bn . '> call s:write_triggered_update_tags(' . l:bn . ')'
-    execute 'augroup end'
+    " execute 'augroup gutentags_buffer_' . l:bn
+    " execute '  autocmd!'
+    " execute '  autocmd BufWritePost <buffer=' . l:bn . '> call s:write_triggered_update_tags(' . l:bn . ')'
+    " execute 'augroup end'
 
     " Miscellaneous commands.
     command! -buffer -bang GutentagsUpdate :call s:manual_update_tags(<bang>0)
